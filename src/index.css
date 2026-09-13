@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --gradient: linear-gradient(105deg, #ff6a00 0%, #ee2b83 54%, #8a43d7 100%);
+  --ink: #111827;
+  --muted: #667085;
+  --line: #e7eaf0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #fff;
+  color: var(--ink);
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.gradient-text {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.gradient-bg {
+  background: var(--gradient);
+}
+
+@layer components {
+  .container-shell {
+    @apply mx-auto w-[calc(100%-40px)] max-w-[1030px];
+  }
+
+  .soft-card {
+    @apply rounded-[12px] border border-[#e7eaf0] bg-white shadow-card;
+  }
+
+  .meta-pill {
+    @apply inline-flex items-center rounded-[4px] bg-[#f5f7fa] px-2 py-[4px] text-[10px] font-medium leading-none text-[#64748b];
+  }
+}
+
+@media (min-width: 768px) {
+  .container-shell {
+    width: calc(100% - 64px);
+  }
+}
+
+@media (min-width: 1200px) {
+  .container-shell {
+    width: calc(100% - 96px);
+  }
+}
