@@ -1,6 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import technologiesData from "./data/technologies.json";
 import type { Technology } from "./types/technology";
 import { Navbar } from "./components/Navbar";
