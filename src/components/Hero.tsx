@@ -1,4 +1,8 @@
-import illustration from "../assets/stack-illustration.png";
+const illustration = new URL(
+  "../assets/stack-illustration.png",
+  import.meta.url,
+).href;
+
 export function Hero() {
   return (
     <section
